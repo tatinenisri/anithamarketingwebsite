@@ -81,8 +81,8 @@ const ButtonText = styled.span`
   height: 36px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 19px;
-  line-height: 150%;
+  font-size: 21px;
+  line-height: 170%;
   letter-spacing: -1.9%;
   color: #FFFFFF;
   text-align: center;
@@ -260,7 +260,7 @@ const Home = () => {
           <WelcomeText>Welcome to Anitha Solutions.</WelcomeText>
           <SubTitle>"An Unique IT Solution"</SubTitle>
           <ExploreButton to="/about">
-            <ButtonText>Explore More About Us</ButtonText>
+            <ButtonText>About Us</ButtonText>
           </ExploreButton>
         </ContentWrapper>
       </HeroSection>
