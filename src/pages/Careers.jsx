@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import careers1 from '../assets/careers1.png';
 
@@ -120,22 +120,30 @@ const CurrentOpeningsTitle = styled.h2`
 
 const OpeningItem = styled.div`
   width: 100%;
-  height: 70px;
   background: #C2E5FFB2;
   border: 3px solid #3DADFF;
   border-radius: 6px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 0 24px;
   margin-bottom: 16px;
   box-sizing: border-box;
+  transition: all 0.3s ease;
   
   @media (max-width: 768px) {
-    height: auto;
     padding: 20px;
-    flex-direction: column;
     text-align: center;
+  }
+`;
+
+const OpeningHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
     gap: 10px;
   }
 `;
@@ -176,35 +184,110 @@ const ExpandIcon = styled.span`
   }
 `;
 
-const ShareResumeButton = styled.button`
-  width: 180px;
-  height: 50px;
-  background: linear-gradient(90deg, #FF9E42 0%, #FFC287 100%);
-  border: none;
-  border-radius: 6px;
-  font-family: 'Avenir Next', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #FFFFFF;
-  cursor: pointer;
-  margin-top: 30px;
-  transition: transform 0.2s ease;
+const OpeningDetails = styled.div`
+  padding: 20px 0;
+  border-top: 1px solid #3DADFF;
+  display: ${props => props.isExpanded ? 'block' : 'none'};
+`;
 
-  &:hover {
-    transform: translateY(-2px);
-  }
-  
-  @media (max-width: 768px) {
-    width: 100%;
-    max-width: 200px;
-  }
+const DetailSection = styled.div`
+  margin-bottom: 20px;
+`;
+
+const DetailTitle = styled.h4`
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  margin: 0 0 10px 0;
+`;
+
+const DetailText = styled.p`
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  margin: 0;
+`;
+
+const ContactInstructions = styled.p`
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+  background: #C2E5FFB2;
+  border-radius: 6px;
+  font-weight: 500;
+`;
+
+const EmailLink = styled.span`
+  color: #004C97;
+  font-weight: 600;
 `;
 
 const Careers = () => {
+  const [expandedItems, setExpandedItems] = useState([]);
+
+  const toggleExpand = (index) => {
+    setExpandedItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
   const openings = [
-    { title: "Opening 1", location: "Brooklyn, NY" },
-    { title: "Opening 2", location: "San Francisco, CA" },
-    { title: "Opening 3", location: "Atlanta, GA" }
+    {
+      title: "Software Engineer",
+      location: "Brooklyn, NY",
+      department: "Software Development",
+      type: "Part-time, Remote Optional",
+      description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Aenean suscipit justo vel interdum bibendum.",
+        "Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt."
+      ],
+      requirements: [
+        "Pellentesque pharetra felis et elit cursus",
+        "nec auctor odio facilisis",
+        "Ut volutpat odio id odio dapibus interdum."
+      ]
+    },
+    {
+      title: "UI/UX Designer",
+      location: "San Francisco, CA",
+      department: "Design",
+      type: "Full-time, On-site",
+      description: [
+        "Design user interfaces for web and mobile applications",
+        "Create wireframes and prototypes",
+        "Collaborate with development team"
+      ],
+      requirements: [
+        "3+ years of UI/UX design experience",
+        "Proficiency in design tools",
+        "Strong portfolio of work"
+      ]
+    },
+    {
+      title: "Project Manager",
+      location: "Atlanta, GA",
+      department: "Operations",
+      type: "Full-time, Hybrid",
+      description: [
+        "Lead project planning and execution",
+        "Coordinate with stakeholders",
+        "Manage project timelines and resources"
+      ],
+      requirements: [
+        "5+ years of project management experience",
+        "PMP certification preferred",
+        "Strong communication skills"
+      ]
+    }
   ];
 
   return (
@@ -240,12 +323,49 @@ const Careers = () => {
         <CurrentOpeningsTitle>Current Openings</CurrentOpeningsTitle>
         {openings.map((opening, index) => (
           <OpeningItem key={index}>
-            <OpeningTitle>{opening.title}</OpeningTitle>
-            <OpeningLocation>{opening.location}</OpeningLocation>
-            <ExpandIcon>+</ExpandIcon>
+            <OpeningHeader>
+              <OpeningTitle>{opening.title}</OpeningTitle>
+              <OpeningLocation>{opening.location}</OpeningLocation>
+              <ExpandIcon onClick={() => toggleExpand(index)}>
+                {expandedItems.includes(index) ? '−' : '+'}
+              </ExpandIcon>
+            </OpeningHeader>
+            <OpeningDetails isExpanded={expandedItems.includes(index)}>
+              <DetailSection>
+                <DetailTitle>Department</DetailTitle>
+                <DetailText>{opening.department}</DetailText>
+              </DetailSection>
+              <DetailSection>
+                <DetailTitle>Type</DetailTitle>
+                <DetailText>{opening.type}</DetailText>
+              </DetailSection>
+              <DetailSection>
+                <DetailTitle>Description</DetailTitle>
+                <DetailText>
+                  {opening.description.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </DetailText>
+              </DetailSection>
+              <DetailSection>
+                <DetailTitle>Requirements</DetailTitle>
+                <DetailText>
+                  {opening.requirements.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </DetailText>
+              </DetailSection>
+            </OpeningDetails>
           </OpeningItem>
         ))}
+        
+        <ContactInstructions>
+          Please mail your resumes to <EmailLink>Ajayveerapaneni@anithasolutions.net</EmailLink> and <EmailLink>Hr@anithasolutions.net</EmailLink> with the subject line having the role name
+        </ContactInstructions>
+        
+        {/* Commented out ShareResumeButton
         <ShareResumeButton>Share Resume/CV</ShareResumeButton>
+        */}
       </CurrentOpeningsSection>
     </CareersContainer>
   );
