@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const HeroSection = styled.section`
   background: url(${heroBg}) no-repeat center center;
   background-size: cover;
-  height: 377px;
+  height: 400px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -22,6 +22,10 @@ const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    height: 300px;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -30,43 +34,47 @@ const ContentWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  max-width: 1552px;
+  max-width: 1200px;
   width: 100%;
   padding: 0 20px;
 `;
 
 const WelcomeText = styled.h1`
-  width: 100%;
-  max-width: 1465px;
-  height: 120px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 80px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
+  font-size: 48px;
+  line-height: 1.2;
   color: #FFFFFF;
   text-align: center;
   margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
 `;
 
 const SubTitle = styled.h2`
-  width: 100%;
-  max-width: 1064px;
-  height: 69px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 46px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
+  font-size: 24px;
+  line-height: 1.3;
   color: #FFFFFF;
   text-align: center;
   margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const ExploreButton = styled(Link)`
-  width: 304px;
-  height: 68px;
+  width: 250px;
+  height: 50px;
   background: linear-gradient(90deg, #FF9E42 0%, #FFC287 100%);
   border-radius: 6px;
   display: flex;
@@ -74,162 +82,183 @@ const ExploreButton = styled(Link)`
   align-items: center;
   text-decoration: none;
   margin-top: 20px;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
 `;
 
 const ButtonText = styled.span`
-  width: 128px;
-  height: 36px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 19px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
+  font-size: 16px;
   color: #FFFFFF;
   text-align: center;
 `;
 
 const AboutContainer = styled.div`
   width: 100%;
-  padding: 200px 0;
+  padding: 80px 0;
   display: flex;
   justify-content: center;
   overflow-x: hidden;
 `;
 
 const AboutSection = styled.section`
-  width: 1258px;
-  height: 431px;
+  width: 100%;
+  max-width: 1200px;
   background: #EBF6FF;
   border-radius: 6px;
   position: relative;
-  padding: 57px 55px;
+  padding: 50px;
   box-sizing: border-box;
-  margin-left: -250px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0 20px;
+  
+  @media (max-width: 968px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
+`;
+
+const AboutContent = styled.div`
+  flex: 1;
+  max-width: 600px;
 `;
 
 const AboutHeading = styled.h2`
-  width: 825px;
-  height: 72px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
+  font-size: 36px;
+  line-height: 1.3;
   color: #000000;
-  margin: 0;
+  margin: 0 0 20px 0;
+  
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 const AboutText = styled.p`
-  width: 949px;
-  height: 180px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
-  color: #000000;
-  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 16px;
 `;
 
 const WhyUsButton = styled(Link)`
-  width: 168px;
-  height: 68px;
+  width: 150px;
+  height: 50px;
   background: linear-gradient(90deg, #FF9E42 0%, #FFC287 100%);
   border-radius: 6px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  margin-top: 27px;
+  margin-top: 20px;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
 `;
 
 const AboutImage = styled.img`
-  width: 463px;
-  height: 455.25px;
-  position: absolute;
-  top: -34.25px;
-  right: -205px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
   object-fit: cover;
 `;
 
 const ServicesContainer = styled.div`
   width: 100%;
-  padding: 50px 0;
+  padding: 80px 0;
   display: flex;
   justify-content: center;
 `;
 
 const ServicesSection = styled.section`
-  width: 1552px;
-  height: 741px;
+  width: 100%;
+  max-width: 1200px;
   background: linear-gradient(180deg, rgba(231, 245, 255, 0.7) 23.45%, rgba(80, 168, 255, 0.7) 95.17%);
   border-radius: 6px;
-  padding: 25px;
+  padding: 50px 30px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 20px;
 `;
 
 const ServicesHeading = styled.h2`
-  width: 825px;
-  height: 72px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
+  font-size: 36px;
+  line-height: 1.3;
   color: black;
   text-align: center;
-  margin-top: 25px;
+  margin-bottom: 40px;
+  
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 const CardsContainer = styled.div`
   display: flex;
-  gap: 40px;
-  margin-top: 36px;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  @media (max-width: 968px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ServiceCard = styled.div`
-  width: 375px;
-  height: 477px;
+  width: 100%;
+  max-width: 350px;
   background: #FFFFFF;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 25px;
+  padding: 40px 25px;
   box-sizing: border-box;
+  text-align: center;
 `;
 
 const ServiceIcon = styled.img`
-  width: 149px;
-  height: 149px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
+  margin-bottom: 20px;
 `;
 
 const ServiceTitle = styled.h4`
-  width: 192px;
-  height: 60px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 600;
-  font-size: 36px;
-  line-height: 115%;
-  letter-spacing: -1.2%;
+  font-size: 20px;
+  line-height: 1.3;
   color: #000000;
   text-align: center;
-  margin: 44px 0 20px 0;
+  margin: 0 0 16px 0;
 `;
 
 const ServiceDescription = styled.p`
-  width: 325px;
-  height: 72px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
-  letter-spacing: -0.9%;
-  color: #1E1E1E;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
   text-align: center;
   margin: 0;
 `;
@@ -267,17 +296,21 @@ const Home = () => {
 
       <AboutContainer>
         <AboutSection>
-          <AboutHeading>About Anitha Solutions</AboutHeading>
-          <AboutText>
-            Anitha Solutions is a technology consulting and support company dedicated to helping 
-            businesses meet their challenges. We believe technology solutions should solve 
-            problems, not create them. We provide a full range of information technology services. 
-            Anitha Solutions has been a leading provider of Software services and solutions dedicated 
-            to helping businesses meet their challenges.
-          </AboutText>
-          <WhyUsButton to="/about">
-            <ButtonText>Why Us?</ButtonText>
-          </WhyUsButton>
+          <AboutContent>
+            <AboutHeading>About Anitha Solutions</AboutHeading>
+            <AboutText>
+              Anitha Solutions is a technology consulting and support company dedicated to helping 
+              businesses meet their challenges. We believe technology solutions should solve 
+              problems, not create them. We provide a full range of information technology services.
+            </AboutText>
+            <AboutText>
+              Anitha Solutions has been a leading provider of Software services and solutions dedicated 
+              to helping businesses meet their challenges with innovative technology approaches.
+            </AboutText>
+            <WhyUsButton to="/about">
+              <ButtonText>Why Us?</ButtonText>
+            </WhyUsButton>
+          </AboutContent>
           <AboutImage src={homeImage1} alt="About Anitha Solutions" />
         </AboutSection>
       </AboutContainer>
@@ -290,7 +323,6 @@ const Home = () => {
               <ServiceCard key={index}>
                 <ServiceIcon src={service.icon} alt={service.title} />
                 <ServiceTitle>{service.title}</ServiceTitle>
-                <br></br>
                 <ServiceDescription>{service.description}</ServiceDescription>
               </ServiceCard>
             ))}
@@ -300,15 +332,19 @@ const Home = () => {
 
       <AboutContainer>
         <AboutSection>
-          <AboutHeading>Careers We Offer</AboutHeading>
-          <AboutText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin eu. Nulla lacinia a ex in rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin eu. Nulla lacinia a ex in rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </AboutText>
-          <WhyUsButton to="/about">
-            <ButtonText>Learn More→</ButtonText>
-          </WhyUsButton>
-          <AboutImage src={homeImage2} alt="About Anitha Solutions" />
+          <AboutContent>
+            <AboutHeading>Careers We Offer</AboutHeading>
+            <AboutText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin eu. Nulla lacinia a ex in rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </AboutText>
+            <AboutText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin eu. Nulla lacinia a ex in rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </AboutText>
+            <WhyUsButton to="/careers">
+              <ButtonText>Learn More →</ButtonText>
+            </WhyUsButton>
+          </AboutContent>
+          <AboutImage src={homeImage2} alt="Careers at Anitha Solutions" />
         </AboutSection>
       </AboutContainer>
     </>

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import careers1 from '../assets/careers1.png';
-import { Link } from 'react-router-dom';
 
 const CareersContainer = styled.div`
   width: 100%;
@@ -11,154 +10,193 @@ const CareersContainer = styled.div`
 `;
 
 const CareersHero = styled.div`
-  width: 1552px;
-  height: 255px;
+  width: 100vw;
+  height: 120px;
   background: #004C97;
-  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0;
+  margin-left: calc(-50vw + 50%);
+  
+  @media (max-width: 768px) {
+    height: 100px;
+  }
 `;
 
 const CareersTitle = styled.h1`
-  width: 363px;
-  height: 144px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 96px;
-  line-height: 150%;
-  letter-spacing: -2.3%;
+  font-size: 48px;
+  line-height: 1.2;
   color: #FFFFFF;
   text-align: center;
   margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
 `;
 
 const MainContent = styled.div`
-  width: 1552px;
-  height: 880px;
+  width: 100%;
+  max-width: 1200px;
   background: #A4D6FF;
-  border: 4px solid #A4D6FF;
   border-radius: 6px;
-  margin-top: 89px;
+  margin: 60px 20px;
   position: relative;
   display: flex;
-  align-items: flex-start;
-  padding: 136px 64px 64px 64px;
+  align-items: center;
+  padding: 50px;
   box-sizing: border-box;
+  gap: 40px;
+  
+  @media (max-width: 968px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
 `;
 
 const ContentText = styled.div`
-  width: 752px;
-  height: 546px;
-  font-family: 'Avenir Next', sans-serif;
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
-  color: #000000;
-  margin-right: 50px;
+  flex: 1;
+  max-width: 600px;
 `;
 
 const WorkTitle = styled.h2`
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 64px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
+  font-size: 36px;
+  line-height: 1.3;
   color: #000000;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 const WorkDescription = styled.p`
-  margin-bottom: 32px;
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 1.6;
+  color: #000000;
+  margin-bottom: 16px;
 `;
 
 const CareersImage = styled.img`
-  width: 622px;
-  height: 669px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
   border-radius: 12px;
-  position: absolute;
-  top: 136px;
-  right: 64px;
+  object-fit: cover;
 `;
 
 const CurrentOpeningsSection = styled.div`
-  width: 1552px;
-  margin-top: 50px;
-  padding: 0 64px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+  padding: 0 20px;
   box-sizing: border-box;
 `;
 
 const CurrentOpeningsTitle = styled.h2`
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 64px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
+  font-size: 36px;
+  line-height: 1.3;
   color: #000000;
   margin-bottom: 40px;
+  
+  @media (max-width: 768px) {
+    font-size: 28px;
+    text-align: center;
+  }
 `;
 
 const OpeningItem = styled.div`
-  width: 1376px;
-  height: 80px;
+  width: 100%;
+  height: 70px;
   background: #C2E5FFB2;
-  border: 4px solid #3DADFF;
+  border: 3px solid #3DADFF;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 32px;
-  margin-bottom: 20px;
+  padding: 0 24px;
+  margin-bottom: 16px;
   box-sizing: border-box;
+  
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 `;
 
 const OpeningTitle = styled.h3`
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
+  font-size: 20px;
+  line-height: 1.3;
   color: #000000;
   margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const OpeningLocation = styled.span`
   font-family: 'Avenir Next', sans-serif;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
+  font-size: 16px;
+  line-height: 1.3;
   color: #004C97;
+  
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 const ExpandIcon = styled.span`
-  font-size: 24px;
+  font-size: 20px;
   color: #004C97;
   cursor: pointer;
+  font-weight: bold;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ShareResumeButton = styled.button`
-  width: 200px;
-  height: 60px;
+  width: 180px;
+  height: 50px;
   background: linear-gradient(90deg, #FF9E42 0%, #FFC287 100%);
   border: none;
   border-radius: 6px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
+  font-size: 16px;
   color: #FFFFFF;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 30px;
   transition: transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 200px;
   }
 `;
 
@@ -191,7 +229,7 @@ const Careers = () => {
             Aenean id ipsum leo. Vestibulum ultrices eleifend nulla, sed 
             aliquet massa malesuada at. Morbi vel posuere nisl. Donec a 
             tortor sit amet mi sollicitudin aliquam. Proin at eros eu mauris 
-            interdum feugiat ac eu purus. rus egestas justo, sed 
+            interdum feugiat ac eu purus. Duis egestas justo, sed 
             condimentum lacus turpis ut metus.
           </WorkDescription>
         </ContentText>

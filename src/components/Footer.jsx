@@ -3,51 +3,57 @@ import styled from 'styled-components';
 import footerbg from '../assets/footerbg.png';
 
 const FooterContainer = styled.footer`
-  width: 100%;
+  width: 100vw;
   background: url(${props => props.bgimage}) no-repeat center center;
   background-size: cover;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 40px;
+  padding: 40px 20px;
   box-sizing: border-box;
-  margin: 20px auto;
-  max-width: 100%;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 0;
 
   @media (max-width: 768px) {
-    padding: 20px;
+    padding: 30px 20px;
   }
+`;
+
+const FooterContent = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 `;
 
 const Title = styled.h2`
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
-  color:rgb(255, 255, 255);
-  margin-bottom: 32px;
+  font-size: 32px;
+  line-height: 1.3;
+  color: rgb(255, 255, 255);
+  margin-bottom: 24px;
   word-wrap: break-word;
 
   @media (max-width: 768px) {
-    font-size: 32px;
+    font-size: 24px;
+    text-align: center;
   }
 `;
 
 const ContactInfo = styled.div`
   font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
-  color:rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 32px;
+  gap: 12px;
+  margin-bottom: 24px;
   word-wrap: break-word;
 
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 15px;
+    text-align: center;
   }
 `;
 
@@ -57,32 +63,33 @@ const FooterBottom = styled.div`
   align-items: center;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
-  color:rgb(255, 255, 255);
-  font-size: 24px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 1.4;
   flex-wrap: wrap;
   gap: 16px;
 
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 13px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 `;
 
 const FooterLinks = styled.div`
   display: flex;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
     gap: 16px;
+    justify-content: center;
   }
 `;
 
 const Link = styled.a`
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -92,19 +99,21 @@ const Link = styled.a`
 const Footer = () => {
   return (
     <FooterContainer bgimage={footerbg}>
-      <Title>Contact Us! We Are More Than Happy To Reach Out.</Title>
-      <ContactInfo>
-        <div>📍 Acme Corp, 123 Main Street, Anytown, CA 43068</div>
-        <div>📞 +1 123-456-7890</div>
-        <div>✉️ fakeexampleemail@gmail.com</div>
-      </ContactInfo>
-      <FooterBottom>
-        <div>© 2025 Anitha Solutions LLC. All Rights Reserved.</div>
-        <FooterLinks>
-          <Link href="/terms">Terms & Privacy</Link>
-          <Link href="/cookies">Manage Cookies</Link>
-        </FooterLinks>
-      </FooterBottom>
+      <FooterContent>
+        <Title>Contact Us! We Are More Than Happy To Reach Out.</Title>
+        <ContactInfo>
+          <div>📍 Acme Corp, 123 Main Street, Anytown, CA 43068</div>
+          <div>📞 +1 123-456-7890</div>
+          <div>✉️ fakeexampleemail@gmail.com</div>
+        </ContactInfo>
+        <FooterBottom>
+          <div>© 2025 Anitha Solutions LLC. All Rights Reserved.</div>
+          <FooterLinks>
+            <Link href="/terms">Terms & Privacy</Link>
+            <Link href="/cookies">Manage Cookies</Link>
+          </FooterLinks>
+        </FooterBottom>
+      </FooterContent>
     </FooterContainer>
   );
 };

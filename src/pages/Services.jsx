@@ -13,42 +13,48 @@ const ServicesContainer = styled.div`
 
 const ServicesHero = styled.div`
   width: 100vw;
-  height: 257px;
+  height: 120px;
   background: #004C97;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0;
   margin-left: calc(-50vw + 50%);
+  
+  @media (max-width: 768px) {
+    height: 100px;
+  }
 `;
 
 const ServicesTitle = styled.h1`
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 96px;
-  line-height: 150%;
-  letter-spacing: -2.3%;
+  font-size: 48px;
+  line-height: 1.2;
   color: #FFFFFF;
   text-align: center;
   margin: 0;
   
   @media (max-width: 768px) {
-    font-size: 64px;
+    font-size: 36px;
   }
   
   @media (max-width: 480px) {
-    font-size: 48px;
+    font-size: 28px;
   }
 `;
 
-const ServiceSection = styled.div`
+const ContentContainer = styled.div`
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+`;
+
+const ServiceSection = styled.div`
   display: flex;
   align-items: center;
   gap: 60px;
-  margin: 80px 0;
-  padding: 0 20px;
+  margin: 60px 0;
   
   @media (max-width: 968px) {
     flex-direction: column;
@@ -71,16 +77,15 @@ const ServiceContent = styled.div`
 `;
 
 const ServiceTitle = styled.h2`
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
+  font-size: 36px;
+  line-height: 1.3;
   color: #000000;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   
   @media (max-width: 768px) {
-    font-size: 36px;
+    font-size: 28px;
   }
 `;
 
@@ -88,17 +93,15 @@ const ServiceList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 `;
 
 const ServiceItem = styled.li`
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
-  color: #000000;
-  margin-bottom: 16px;
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 12px;
   position: relative;
   padding-left: 20px;
   
@@ -111,13 +114,13 @@ const ServiceItem = styled.li`
   }
   
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 15px;
   }
 `;
 
 const ServiceImage = styled.img`
   width: 100%;
-  max-width: 460px;
+  max-width: 500px;
   height: auto;
   max-height: 350px;
   border-radius: 12px;
@@ -131,50 +134,52 @@ const Services = () => {
         <ServicesTitle>Services</ServicesTitle>
       </ServicesHero>
 
-      {/* Service 1 - Content left, Image right */}
-      <ServiceSection>
-        <ServiceContent>
-          <ServiceTitle>Service 1</ServiceTitle>
-          <ServiceList>
-            <ServiceItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ServiceItem>
-            <ServiceItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</ServiceItem>
-            <ServiceItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</ServiceItem>
-            <ServiceItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</ServiceItem>
-            <ServiceItem>Ut volutpat odio id odio dapibus interdum.</ServiceItem>
-          </ServiceList>
-        </ServiceContent>
-        <ServiceImage src={service1} alt="Service 1" />
-      </ServiceSection>
+      <ContentContainer>
+        {/* Service 1 - Content left, Image right */}
+        <ServiceSection>
+          <ServiceContent>
+            <ServiceTitle>Service 1</ServiceTitle>
+            <ServiceList>
+              <ServiceItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ServiceItem>
+              <ServiceItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</ServiceItem>
+              <ServiceItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</ServiceItem>
+              <ServiceItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</ServiceItem>
+              <ServiceItem>Ut volutpat odio id odio dapibus interdum.</ServiceItem>
+            </ServiceList>
+          </ServiceContent>
+          <ServiceImage src={service1} alt="Service 1" />
+        </ServiceSection>
 
-      {/* Service 2 - Image left, Content right */}
-      <ServiceSectionReverse>
-        <ServiceContent>
-          <ServiceTitle>Service 2</ServiceTitle>
-          <ServiceList>
-            <ServiceItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ServiceItem>
-            <ServiceItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</ServiceItem>
-            <ServiceItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</ServiceItem>
-            <ServiceItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</ServiceItem>
-            <ServiceItem>Ut volutpat odio id odio dapibus interdum.</ServiceItem>
-          </ServiceList>
-        </ServiceContent>
-        <ServiceImage src={service2} alt="Service 2" />
-      </ServiceSectionReverse>
+        {/* Service 2 - Image left, Content right */}
+        <ServiceSectionReverse>
+          <ServiceContent>
+            <ServiceTitle>Service 2</ServiceTitle>
+            <ServiceList>
+              <ServiceItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ServiceItem>
+              <ServiceItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</ServiceItem>
+              <ServiceItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</ServiceItem>
+              <ServiceItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</ServiceItem>
+              <ServiceItem>Ut volutpat odio id odio dapibus interdum.</ServiceItem>
+            </ServiceList>
+          </ServiceContent>
+          <ServiceImage src={service2} alt="Service 2" />
+        </ServiceSectionReverse>
 
-      {/* Service 3 - Content left, Image right */}
-      <ServiceSection style={{ marginBottom: '120px' }}>
-        <ServiceContent>
-          <ServiceTitle>Service 3</ServiceTitle>
-          <ServiceList>
-            <ServiceItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ServiceItem>
-            <ServiceItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</ServiceItem>
-            <ServiceItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</ServiceItem>
-            <ServiceItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</ServiceItem>
-            <ServiceItem>Ut volutpat odio id odio dapibus interdum.</ServiceItem>
-          </ServiceList>
-        </ServiceContent>
-        <ServiceImage src={service3} alt="Service 3" />
-      </ServiceSection>
+        {/* Service 3 - Content left, Image right */}
+        <ServiceSection style={{ marginBottom: '80px' }}>
+          <ServiceContent>
+            <ServiceTitle>Service 3</ServiceTitle>
+            <ServiceList>
+              <ServiceItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ServiceItem>
+              <ServiceItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</ServiceItem>
+              <ServiceItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</ServiceItem>
+              <ServiceItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</ServiceItem>
+              <ServiceItem>Ut volutpat odio id odio dapibus interdum.</ServiceItem>
+            </ServiceList>
+          </ServiceContent>
+          <ServiceImage src={service3} alt="Service 3" />
+        </ServiceSection>
+      </ContentContainer>
     </ServicesContainer>
   );
 };

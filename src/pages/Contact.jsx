@@ -13,43 +13,45 @@ const ContactContainer = styled.div`
 
 const ContactHero = styled.div`
   width: 100vw;
-  height: 257px;
+  height: 120px;
   background: #004C97;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0;
   margin-left: calc(-50vw + 50%);
+  
+  @media (max-width: 768px) {
+    height: 100px;
+  }
 `;
 
 const ContactTitle = styled.h1`
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 96px;
-  line-height: 150%;
-  letter-spacing: -2.3%;
+  font-size: 48px;
+  line-height: 1.2;
   color: #FFFFFF;
   text-align: center;
   margin: 0;
   
   @media (max-width: 768px) {
-    font-size: 64px;
+    font-size: 36px;
   }
   
   @media (max-width: 480px) {
-    font-size: 48px;
+    font-size: 28px;
   }
 `;
 
 const ContactOptionsSection = styled.div`
   width: 100vw;
-  min-height: 662px;
-  margin-top: 50px;
+  min-height: 500px;
+  margin-top: 60px;
   background: #E9F6FF;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
   box-sizing: border-box;
   margin-left: calc(-50vw + 50%);
   
@@ -62,10 +64,11 @@ const ContactOptionsSection = styled.div`
 
 const ContactOptionsContainer = styled.div`
   width: 100%;
-  max-width: 1548px;
+  max-width: 1200px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 30px;
   
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -75,93 +78,85 @@ const ContactOptionsContainer = styled.div`
 
 const ContactOption = styled.div`
   width: 100%;
-  max-width: 448px;
-  min-height: 496px;
+  max-width: 350px;
+  min-height: 400px;
   background: #FFFFFF;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 60px 20px 20px 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
-  
-  @media (max-width: 1200px) {
-    max-width: 400px;
-  }
+  text-align: center;
   
   @media (max-width: 768px) {
     max-width: 100%;
-    padding: 40px 20px;
+    padding: 30px 20px;
+    min-height: 300px;
   }
 `;
 
 const ContactIcon = styled.img`
-  width: 237px;
-  height: 195px;
-  margin-bottom: 60px;
+  width: 150px;
+  height: 120px;
+  margin-bottom: 30px;
+  object-fit: contain;
   
   @media (max-width: 768px) {
-    width: 180px;
-    height: 148px;
-    margin-bottom: 40px;
+    width: 120px;
+    height: 96px;
+    margin-bottom: 20px;
   }
 `;
 
 const ContactOptionTitle = styled.h3`
-  width: 100%;
-  max-width: 311px;
-  font-family: 'Avenir Next';
+  font-family: 'Avenir Next', sans-serif;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
-  text-align: center;
-  margin: 0 0 20px 0;
-  
-  @media (max-width: 768px) {
-    font-size: 32px;
-  }
-`;
-
-const ContactOptionDescription = styled.p`
-  font-family: 'Avenir Next';
-  font-weight: 500;
   font-size: 24px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
+  line-height: 1.3;
   text-align: center;
-  margin: 0;
+  margin: 0 0 16px 0;
+  color: #000000;
   
   @media (max-width: 768px) {
     font-size: 20px;
   }
 `;
 
-const ContactFormSection = styled.div`
-  width: 100%;
-  max-width: 1552px;
-  margin-top: 80px;
-  padding: 0 64px;
-  box-sizing: border-box;
+const ContactOptionDescription = styled.p`
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  color: #333333;
   
   @media (max-width: 768px) {
-    padding: 0 20px;
+    font-size: 15px;
   }
+`;
+
+const ContactFormSection = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 `;
 
 const ContactFormTitle = styled.h2`
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
+  font-size: 32px;
+  line-height: 1.3;
   color: #000000;
   text-align: center;
   margin-bottom: 40px;
   
   @media (max-width: 768px) {
-    font-size: 36px;
+    font-size: 24px;
   }
 `;
 
@@ -170,25 +165,26 @@ const ContactForm = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 `;
 
 const FormInput = styled.input`
   width: 100%;
-  max-width: 1104px;
-  height: 60px;
+  height: 50px;
   background: #D6EBFF;
   border: none;
   border-radius: 6px;
   padding: 0 20px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  color: #7BB3E8;
+  font-size: 16px;
+  color: #333333;
   box-sizing: border-box;
 
   &::placeholder {
     color: #7BB3E8;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   &:focus {
@@ -199,7 +195,6 @@ const FormInput = styled.input`
 
 const FormTextarea = styled.textarea`
   width: 100%;
-  max-width: 1104px;
   height: 120px;
   background: #D6EBFF;
   border: none;
@@ -207,14 +202,14 @@ const FormTextarea = styled.textarea`
   padding: 20px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  color: #7BB3E8;
+  font-size: 16px;
+  color: #333333;
   resize: vertical;
   box-sizing: border-box;
 
   &::placeholder {
     color: #7BB3E8;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   &:focus {
@@ -224,93 +219,22 @@ const FormTextarea = styled.textarea`
 `;
 
 const ContactButton = styled.button`
-  width: 197px;
-  height: 68px;
+  width: 180px;
+  height: 50px;
   background: linear-gradient(90deg, #FF9E42 0%, #FFC287 100%);
   border: none;
   border-radius: 6px;
   font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
+  font-size: 16px;
   color: #FFFFFF;
   cursor: pointer;
   margin-top: 20px;
   transition: transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
   }
-`;
-
-const ContactFooter = styled.div`
-  width: 100%;
-  background: #004C97;
-  margin-top: 100px;
-  padding: 50px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const FooterTitle = styled.h2`
-  font-family: 'Avenir Next', sans-serif;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 150%;
-  color: #FFFFFF;
-  text-align: center;
-  margin-bottom: 40px;
-`;
-
-const FooterContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 1200px;
-  margin-bottom: 40px;
-`;
-
-const FooterContactInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-
-const FooterContactItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-family: 'Avenir Next', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #FFFFFF;
-`;
-
-const FooterLinks = styled.div`
-  display: flex;
-  gap: 40px;
-`;
-
-const FooterLink = styled.a`
-  font-family: 'Avenir Next', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #FFFFFF;
-  text-decoration: none;
-  
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-const FooterCopyright = styled.div`
-  font-family: 'Avenir Next', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #FFFFFF;
-  text-align: center;
 `;
 
 const Contact = () => {

@@ -15,9 +15,11 @@ const MainContent = styled.main`
   flex: 1;
   width: 100%;
   max-width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
+  margin: 0;
   box-sizing: border-box;
+  
+  /* Remove default padding - let each page control its own spacing */
+  padding: 0;
 `;
 
 const Layout = ({ children }) => {

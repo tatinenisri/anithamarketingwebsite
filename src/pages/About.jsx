@@ -12,42 +12,48 @@ const AboutContainer = styled.div`
 
 const AboutHero = styled.div`
   width: 100vw;
-  height: 257px;
+  height: 120px;
   background: #004C97;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0;
   margin-left: calc(-50vw + 50%);
+  
+  @media (max-width: 768px) {
+    height: 100px;
+  }
 `;
 
 const AboutTitle = styled.h1`
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 96px;
-  line-height: 150%;
-  letter-spacing: -2.3%;
+  font-size: 48px;
+  line-height: 1.2;
   color: #FFFFFF;
   text-align: center;
   margin: 0;
   
   @media (max-width: 768px) {
-    font-size: 64px;
+    font-size: 36px;
   }
   
   @media (max-width: 480px) {
-    font-size: 48px;
+    font-size: 28px;
   }
 `;
 
-const MissionSection = styled.div`
+const ContentContainer = styled.div`
   width: 100%;
   max-width: 1200px;
-  display: flex;
-  align-items: flex-start;
-  gap: 60px;
-  margin: 80px 0;
+  margin: 0 auto;
   padding: 0 20px;
+`;
+
+const MissionSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin: 60px 0;
   
   @media (max-width: 968px) {
     flex-direction: column;
@@ -62,49 +68,44 @@ const MissionContent = styled.div`
 `;
 
 const MissionTitle = styled.h2`
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
-  color: #000000;
-  margin-bottom: 32px;
-  
-  @media (max-width: 768px) {
-    font-size: 36px;
-  }
-`;
-
-const MissionText = styled.p`
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
+  font-size: 36px;
+  line-height: 1.3;
   color: #000000;
   margin-bottom: 24px;
   
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 28px;
+  }
+`;
+
+const MissionText = styled.p`
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 16px;
+  
+  @media (max-width: 768px) {
+    font-size: 15px;
   }
 `;
 
 const MissionImage = styled.img`
   width: 100%;
-  max-width: 460px;
+  max-width: 500px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
 `;
 
 const WhyUsSection = styled.div`
-  width: 100%;
-  max-width: 1200px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 60px;
-  margin: 80px 0 120px 0;
-  padding: 0 20px;
+  margin: 60px 0 80px 0;
   
   @media (max-width: 968px) {
     flex-direction: column;
@@ -119,16 +120,15 @@ const WhyUsContent = styled.div`
 `;
 
 const WhyUsTitle = styled.h2`
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 150%;
-  letter-spacing: -2.2%;
+  font-size: 36px;
+  line-height: 1.3;
   color: #000000;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   
   @media (max-width: 768px) {
-    font-size: 36px;
+    font-size: 28px;
   }
 `;
 
@@ -139,13 +139,12 @@ const WhyUsList = styled.ul`
 `;
 
 const WhyUsItem = styled.li`
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
-  color: #000000;
-  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 12px;
   position: relative;
   padding-left: 20px;
   
@@ -158,45 +157,43 @@ const WhyUsItem = styled.li`
   }
   
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 15px;
   }
 `;
 
 const ContactButton = styled.button`
-  width: 200px;
-  height: 60px;
+  width: 180px;
+  height: 50px;
   background: linear-gradient(90deg, #FF9E42 0%, #FFC287 100%);
   border: none;
   border-radius: 6px;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Avenir Next', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 150%;
-  letter-spacing: -1.9%;
+  font-size: 16px;
   color: #FFFFFF;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 24px;
   transition: transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
   }
 `;
 
 const TeamImage = styled.img`
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   
   @media (max-width: 968px) {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
   }
   
   @media (max-width: 768px) {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
   }
 `;
 
@@ -207,42 +204,44 @@ const About = () => {
         <AboutTitle>About Us</AboutTitle>
       </AboutHero>
 
-      <MissionSection>
-        <MissionContent>
-          <MissionTitle>Our mission</MissionTitle>
-          <MissionText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin 
-            eu. Nulla lacinia a ex in rhoncus. Quisque vitae viverra nisl, 
-            non lacinia elit. Suspendisse iaculis enim vel eros blandit, 
-            ultrices vehicula ante scelerisque. Nulla facilisi. Proin sit 
-            amet augue eu metus pharetra rutrum. Interdum et malesuada 
-            fames ac ante ipsum primis in faucibus.
-          </MissionText>
-          <MissionText>
-            Aenean id ipsum leo. Vestibulum ultrices eleifend nulla, sed 
-            aliquet massa malesuada at. Morbi vel posuere nisl. Donec a 
-            tortor sit amet mi sollicitudin aliquam. Proin at eros eu mauris 
-            interdum feugiat ac eu purus. Duis egestas justo, sed 
-            condimentum lacus turpis ut metus.
-          </MissionText>
-        </MissionContent>
-        <MissionImage src={about1} alt="Our mission" />
-      </MissionSection>
+      <ContentContainer>
+        <MissionSection>
+          <MissionContent>
+            <MissionTitle>Our mission</MissionTitle>
+            <MissionText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin 
+              eu. Nulla lacinia a ex in rhoncus. Quisque vitae viverra nisl, 
+              non lacinia elit. Suspendisse iaculis enim vel eros blandit, 
+              ultrices vehicula ante scelerisque. Nulla facilisi. Proin sit 
+              amet augue eu metus pharetra rutrum. Interdum et malesuada 
+              fames ac ante ipsum primis in faucibus.
+            </MissionText>
+            <MissionText>
+              Aenean id ipsum leo. Vestibulum ultrices eleifend nulla, sed 
+              aliquet massa malesuada at. Morbi vel posuere nisl. Donec a 
+              tortor sit amet mi sollicitudin aliquam. Proin at eros eu mauris 
+              interdum feugiat ac eu purus. Duis egestas justo, sed 
+              condimentum lacus turpis ut metus.
+            </MissionText>
+          </MissionContent>
+          <MissionImage src={about1} alt="Our mission" />
+        </MissionSection>
 
-      <WhyUsSection>
-        <WhyUsContent>
-          <WhyUsTitle>Why us?</WhyUsTitle>
-          <WhyUsList>
-            <WhyUsItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</WhyUsItem>
-            <WhyUsItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</WhyUsItem>
-            <WhyUsItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</WhyUsItem>
-            <WhyUsItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</WhyUsItem>
-          </WhyUsList>
-          <ContactButton>Let's Connect →</ContactButton>
-        </WhyUsContent>
-        <TeamImage src={about2} alt="Why choose us" />
-      </WhyUsSection>
+        <WhyUsSection>
+          <WhyUsContent>
+            <WhyUsTitle>Why us?</WhyUsTitle>
+            <WhyUsList>
+              <WhyUsItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</WhyUsItem>
+              <WhyUsItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</WhyUsItem>
+              <WhyUsItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</WhyUsItem>
+              <WhyUsItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</WhyUsItem>
+            </WhyUsList>
+            <ContactButton>Let's Connect →</ContactButton>
+          </WhyUsContent>
+          <TeamImage src={about2} alt="Why choose us" />
+        </WhyUsSection>
+      </ContentContainer>
     </AboutContainer>
   );
 };
