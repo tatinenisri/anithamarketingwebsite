@@ -335,10 +335,7 @@ const Home = () => {
           <AboutContent>
             <AboutHeading>Careers We Offer</AboutHeading>
             <AboutText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin eu. Nulla lacinia a ex in rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </AboutText>
-            <AboutText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin eu. Nulla lacinia a ex in rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            We deliver end-to-end software services to B2B and B2C companies globally that can be customized corresponding to your business requirements. Over the years, AnithaSolutions has associated with various industries and remains successful in retaining them to this day due to their quality-driven services.
             </AboutText>
             <WhyUsButton to="/careers">
               <ButtonText>Learn More →</ButtonText>

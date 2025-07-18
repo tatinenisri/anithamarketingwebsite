@@ -209,20 +209,11 @@ const About = () => {
           <MissionContent>
             <MissionTitle>Our mission</MissionTitle>
             <MissionText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin 
-              eu. Nulla lacinia a ex in rhoncus. Quisque vitae viverra nisl, 
-              non lacinia elit. Suspendisse iaculis enim vel eros blandit, 
-              ultrices vehicula ante scelerisque. Nulla facilisi. Proin sit 
-              amet augue eu metus pharetra rutrum. Interdum et malesuada 
-              fames ac ante ipsum primis in faucibus.
+            Anitha Solutions is an IT services and solutions provider company, supporting various businesses across the USA through innovative IT services and solutions. We deliver end-to-end software services to B2B and B2C companies globally that can be customized corresponding to your business requirements. Over the years, Anitha Solutions has associated with various industries and remains successful in retaining them to this day due to their quality-driven services.
             </MissionText>
             <MissionText>
-              Aenean id ipsum leo. Vestibulum ultrices eleifend nulla, sed 
-              aliquet massa malesuada at. Morbi vel posuere nisl. Donec a 
-              tortor sit amet mi sollicitudin aliquam. Proin at eros eu mauris 
-              interdum feugiat ac eu purus. Duis egestas justo, sed 
-              condimentum lacus turpis ut metus.
+            At Anitha Solutions, our expert team is highly knowledgeable and skilled at resolving your business challenges by analyzing the intensity with a unique approach. We look after everything, right from development to maintenance, digitalizing business operations, testing, handling big data, and providing complete support while ensuring quality and security.
+
             </MissionText>
           </MissionContent>
           <MissionImage src={about1} alt="Our mission" />
@@ -232,10 +223,10 @@ const About = () => {
           <WhyUsContent>
             <WhyUsTitle>Why us?</WhyUsTitle>
             <WhyUsList>
-              <WhyUsItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</WhyUsItem>
-              <WhyUsItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</WhyUsItem>
-              <WhyUsItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</WhyUsItem>
-              <WhyUsItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</WhyUsItem>
+              <WhyUsItem>Offer custom software services that are personalized corresponding to your business model and requirements.</WhyUsItem>
+              <WhyUsItem>Supplied with a team of experienced engineers who are competent at developing solitary software applications meeting your specifications.</WhyUsItem>
+              <WhyUsItem>Serve our clients with high-quality IT services that are reliable and secure on time.</WhyUsItem>
+              <WhyUsItem>Our clients are involved at every stage of the development process to maintain transparency and accountability</WhyUsItem>
             </WhyUsList>
             <ContactButton>Let's Connect →</ContactButton>
           </WhyUsContent>

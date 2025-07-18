@@ -246,14 +246,17 @@ const Careers = () => {
       department: "Software Development",
       type: "Part-time, Remote Optional",
       description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Aenean suscipit justo vel interdum bibendum.",
-        "Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt."
+        "6+ years of Java development experience with strong backend architecture knowledge",
+        "Proficiency in Spring Boot and microservices development",
+        "Hands-on experience with REST/SOAP services",
+        "Advanced skills in PL/SQL and relational databases (Oracle/SQL Server)",
+        "Solid experience with AWS services (EC2, Lambda, S3, API Gateway, RDS)"
       ],
       requirements: [
-        "Pellentesque pharetra felis et elit cursus",
-        "nec auctor odio facilisis",
-        "Ut volutpat odio id odio dapibus interdum."
+        "Working knowledge of Apache Kafka for event-driven architecture",
+        "Tools: Jenkins, Git, Maven, IntelliJ, Tomcat",
+        "Familiarity with CI/CD and cloud-native deployment models",
+        "Experience in Agile development and strong team collaboration"
       ]
     },
     {
@@ -262,32 +265,16 @@ const Careers = () => {
       department: "Design",
       type: "Full-time, On-site",
       description: [
-        "Design user interfaces for web and mobile applications",
-        "Create wireframes and prototypes",
-        "Collaborate with development team"
+        "5+ years experience with React Native (CLI preferred)",
+        "Proficient in JavaScript and TypeScript",
+        "Experience with Redux, React Navigation, and custom UI components",
+        "Familiarity with mobile app release processes (App Store & Play Store)"
       ],
       requirements: [
-        "3+ years of UI/UX design experience",
-        "Proficiency in design tools",
-        "Strong portfolio of work"
+        "5+ years experience with Java and Spring Boot",
+        "Solid understanding of RESTful APIs, Spring Security, and JWT"
       ]
     },
-    {
-      title: "Project Manager",
-      location: "Atlanta, GA",
-      department: "Operations",
-      type: "Full-time, Hybrid",
-      description: [
-        "Lead project planning and execution",
-        "Coordinate with stakeholders",
-        "Manage project timelines and resources"
-      ],
-      requirements: [
-        "5+ years of project management experience",
-        "PMP certification preferred",
-        "Strong communication skills"
-      ]
-    }
   ];
 
   return (
@@ -300,20 +287,10 @@ const Careers = () => {
         <ContentText>
           <WorkTitle>Our work</WorkTitle>
           <WorkDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin 
-            eu. Nulla lacinia a ex in rhoncus. Quisque vitae viverra nisl, 
-            non lacinia elit. Suspendisse iaculis enim vel eros blandit, 
-            ultrices vehicula ante scelerisque. Nulla facilisi. Proin sit 
-            amet augue eu metus pharetra rutrum. Interdum et malesuada 
-            fames ac ante ipsum primis in faucibus.
+          Anitha Solutions is an IT services and solutions provider company, supporting various businesses across the USA through innovative IT services and solutions. We deliver end-to-end software services to B2B and B2C companies globally that can be customized corresponding to your business requirements. Over the years, Anitha Solutions has associated with various industries and remains successful in retaining them to this day due to their quality-driven services.
           </WorkDescription>
           <WorkDescription>
-            Aenean id ipsum leo. Vestibulum ultrices eleifend nulla, sed 
-            aliquet massa malesuada at. Morbi vel posuere nisl. Donec a 
-            tortor sit amet mi sollicitudin aliquam. Proin at eros eu mauris 
-            interdum feugiat ac eu purus. Duis egestas justo, sed 
-            condimentum lacus turpis ut metus.
+          At Anitha Solutions, our expert team is highly knowledgeable and skilled at resolving your business challenges by analyzing the intensity with a unique approach. We look after everything, right from development to maintenance, digitalizing business operations, testing, handling big data, and providing complete support while ensuring quality and security.
           </WorkDescription>
         </ContentText>
         <CareersImage src={careers1} alt="Our work environment" />

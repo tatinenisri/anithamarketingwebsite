@@ -138,13 +138,11 @@ const Services = () => {
         {/* Service 1 - Content left, Image right */}
         <ServiceSection>
           <ServiceContent>
-            <ServiceTitle>Service 1</ServiceTitle>
+            <ServiceTitle>Application Development Services</ServiceTitle>
             <ServiceList>
-              <ServiceItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ServiceItem>
-              <ServiceItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</ServiceItem>
-              <ServiceItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</ServiceItem>
-              <ServiceItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</ServiceItem>
-              <ServiceItem>Ut volutpat odio id odio dapibus interdum.</ServiceItem>
+              <ServiceItem>Discuss your business objectives and application ideas with our experts, and they will assist you in developing an altogether new application as well as provide guidance on every stage of your application’s development life cycle.</ServiceItem>
+              <ServiceItem>In-house, we are staffed with developers who are well knowledgeable about various emerging technologies and have experience in developing software applications according to the client’s needs.</ServiceItem>
+              <ServiceItem>We provide rapid solutions in order to avoid major issues that may develop during operation, technology, or coding. We ensure that the applications are user-friendly and cross-platform compatible.</ServiceItem>
             </ServiceList>
           </ServiceContent>
           <ServiceImage src={service1} alt="Service 1" />
@@ -153,13 +151,12 @@ const Services = () => {
         {/* Service 2 - Image left, Content right */}
         <ServiceSectionReverse>
           <ServiceContent>
-            <ServiceTitle>Service 2</ServiceTitle>
+            <ServiceTitle>Application Maintenance & Support</ServiceTitle>
             <ServiceList>
-              <ServiceItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ServiceItem>
-              <ServiceItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</ServiceItem>
-              <ServiceItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</ServiceItem>
-              <ServiceItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</ServiceItem>
-              <ServiceItem>Ut volutpat odio id odio dapibus interdum.</ServiceItem>
+              <ServiceItem>Our application maintenance and support services are completely personalized, we tailor the services to your specific needs, including any kind of maintenance and support.</ServiceItem>
+              <ServiceItem>Complete end-to-end assistance will be provided to your business by our expert team right from monitoring to identifying bugs & fixing them and testing the remodeled application for better performance.</ServiceItem>
+              <ServiceItem>We also provide onsite-offshore and nearshore AMS project models to various clients in order to improve business scalability, productivity, business revenue reduction, quality of applications, security, and customer satisfaction.
+              </ServiceItem>
             </ServiceList>
           </ServiceContent>
           <ServiceImage src={service2} alt="Service 2" />
@@ -168,13 +165,11 @@ const Services = () => {
         {/* Service 3 - Content left, Image right */}
         <ServiceSection style={{ marginBottom: '80px' }}>
           <ServiceContent>
-            <ServiceTitle>Service 3</ServiceTitle>
+            <ServiceTitle>Data and Analytics</ServiceTitle>
             <ServiceList>
-              <ServiceItem>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ServiceItem>
-              <ServiceItem>Aenean tincidunt mauris nulla, sed efficitur dui sollicitudin.</ServiceItem>
-              <ServiceItem>Duis auctor erat vel tellus porttitor, vel fermentum tellus tincidunt.</ServiceItem>
-              <ServiceItem>Pellentesque pharetra felis et elit cursus, nec auctor odio facilisis.</ServiceItem>
-              <ServiceItem>Ut volutpat odio id odio dapibus interdum.</ServiceItem>
+              <ServiceItem>We supply a comprehensive array of software development, product testing, optimization, and data analytics services that can be used to speed up the product's time to market.</ServiceItem>
+              <ServiceItem>We have deep domain experience, Anitha Solutions is staffed with highly experienced data engineers, developers, and scientists for offering quality-driven data analytical models</ServiceItem>
+              <ServiceItem>Delivering impactful insights is our ultimate objective, hence we supply these insights, reports, and engagements by leveraging Artificial Intelligence and Machine Learning.</ServiceItem>
             </ServiceList>
           </ServiceContent>
           <ServiceImage src={service3} alt="Service 3" />

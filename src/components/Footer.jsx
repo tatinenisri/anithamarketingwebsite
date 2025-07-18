@@ -102,9 +102,9 @@ const Footer = () => {
       <FooterContent>
         <Title>Contact Us! We Are More Than Happy To Reach Out.</Title>
         <ContactInfo>
-          <div>📍 Acme Corp, 123 Main Street, Anytown, CA 43068</div>
-          <div>📞 +1 123-456-7890</div>
-          <div>✉️ fakeexampleemail@gmail.com</div>
+          <div>📍 Haslett, MI, 48840</div>
+          <div>📞 +1  517-331-9549</div>
+          <div>✉️ Ajayveerapaneni@anithasolutions.net</div>
         </ContactInfo>
         <FooterBottom>
           <div>© 2025 Anitha Solutions LLC. All Rights Reserved.</div>
