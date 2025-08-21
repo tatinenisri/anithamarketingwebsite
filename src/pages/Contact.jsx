@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import contact1 from '../assets/contact-1.png';
 import contact2 from '../assets/contact-2.png';
@@ -255,6 +255,18 @@ const Contact = () => {
       description: "Please mail your queries to Ajayveerapaneni@anithasolutions.net and Hr@anithasolutions.net with the subject line having the query"
     }
   ];
+  
+const [fullName, setFullName] = useState('');
+const [contactInfo, setContactInfo] = useState('');
+const [message, setMessage] = useState('');
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const subject = encodeURIComponent(`Contact from ${fullName}`);
+  const body = encodeURIComponent(`${message}\n\nContact: ${contactInfo}`);
+  window.location.href = `mailto:Hr@anithasolutions.net?subject=${subject}&body=${body}`;
+};
+
 
   return (
     <ContactContainer>
@@ -273,24 +285,29 @@ const Contact = () => {
           ))}
         </ContactOptionsContainer>
       </ContactOptionsSection>
-
       <ContactFormSection>
         <ContactFormTitle>Contact Us For More Questions & Concerns:</ContactFormTitle>
-        <ContactForm>
-          <FormInput 
-            type="text" 
-            placeholder="Full Name" 
-          />
-          <FormInput 
-            type="text" 
-            placeholder="Email / Phone Number" 
-          />
-          <FormTextarea 
-            placeholder="Message"
-            rows={4}
-          />
-          <ContactButton type="submit">Contact Us</ContactButton>
-        </ContactForm>
+         <ContactForm onSubmit={handleSubmit}>
+  <FormInput
+    type="text"
+    placeholder="Full Name"
+    value={fullName}
+    onChange={(e) => setFullName(e.target.value)}
+  />
+  <FormInput
+    type="text"
+    placeholder="Email / Phone Number"
+    value={contactInfo}
+    onChange={(e) => setContactInfo(e.target.value)}
+  />
+  <FormTextarea
+    placeholder="Message"
+    rows={4}
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+  />
+  <ContactButton type="submit">Contact Us</ContactButton>
+</ContactForm>
       </ContactFormSection>
     </ContactContainer>
   );
