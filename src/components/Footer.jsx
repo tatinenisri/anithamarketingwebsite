@@ -102,7 +102,7 @@ const Footer = () => {
       <FooterContent>
         <Title>Contact Us! We Are More Than Happy To Reach Out.</Title>
         <ContactInfo>
-          <div>📍 Haslett, MI, 48840</div>
+          <div>📍 120 North Washington Square, Suite 300, Lansing, MI 48933</div>
           <div>📞 +1  517-331-9549</div>
           <div>✉️ Ajayveerapaneni@anithasolutions.net</div>
         </ContactInfo>
